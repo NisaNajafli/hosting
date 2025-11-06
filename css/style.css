@@ -196,7 +196,7 @@
   animation: fadeInLeft 0.8s ease forwards 0.8s;
 }
 
-.hero-.btn-mains {
+.hero-buttons {
   display: flex;
   gap: 20px;
   opacity: 0;
@@ -384,6 +384,7 @@
     font-size: 12px;
   line-height: 20px;
     min-height: 48px;
+    position: relative;
 }
 
 .btn-main:before {
@@ -395,12 +396,12 @@
   bottom: 0;
   opacity: 0;
   content: '';
-  background-color: #fff;
+  background-color: var(--red);
   z-index: -1;
 }
 
 .btn-main:hover, .btn-main:focus {
-  color: var(--red);
+  color:#fff;
 }
 
 .btn-main:hover:before, .btn-main:focus:before {
