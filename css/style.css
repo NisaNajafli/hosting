@@ -1102,64 +1102,313 @@
   display: flex;
   align-items:center
 } */
- footer{
-  background-color: #fff;
-  padding: 50px 0;
- }
- #logofooter img{
-        height: 100%;
-    width: 120px;
-  }
-  footer .btn-main2{
-    width: 250px;
-    padding: 14px 30px;
-  }
-  footer .header-phone-side a{
-    font-size: 18px !important;
-  }
-  /* footer .header-icons-text{
-    font-size: 22px;
-  }
-  footer .header-icons-text span{
-    font-size: 22px;
-  }
-  footer .header-icons::after{
-    width: 10px;
-    height: 10px;
-    left: -16px;
-  }
-  footer .header-icons a svg{
-    width: 30px;
-    height: 30px;
-  } */
-.footer-top{
-  margin-bottom: 30px;
+
+
+.pricing-area {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    padding: 60px 0;
 }
-.footer-content{
+
+/* .pricing_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+} */
+ .swiperprice .swiper-wrapper{
+  padding: 10px;
+ }
+.pricing-area h2{
+   font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    color: #333
+}
+.pricing_card {
   display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease;
+}
+
+/* Üst lent */
+.pricing_card > p {
+  position: absolute;
+  top: -4px;
+  left: -16px;
+  padding: 20px 40px 12px 32px;
+  background-color: var(--red);
+  border: 1px solid var(--red);
+  color: #fff;
+  transform: rotate(-37deg) translate(-9px, -12px);
+  text-align: center;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Üst başlıq */
+.pricing_card > span {
+  background: linear-gradient(90deg, var(--brown), var(--red));
+  color: #fff;
+  width: 100%;
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px 20px 0 0;
+}
+
+/* Qiymət bölməsi */
+.pricing_card h3 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+  background: rgb(var(--color-red) / var(--tw-bg-opacity));
+}
+
+.pricing_card h3 span {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--red);
+  display: block;
+}
+
+.pricing_card h3 p {
+  font-size: 16px;
+  color: var(--brown);
+  margin-top: 5px;
+}
+
+/* Təsvir hissəsi */
+/* .pricing_card .pricing_desc {
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+} */
+
+.pricing_desc {
+  background: #fff;
+  padding: 20px 25px;
+  text-align: left;
+}
+
+.pricing_desc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pricing_desc ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.pricing_desc ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--red);
+  font-weight: 700;
+  font-size: 14px;
+  transform: translateY(2px);
+}
+
+.pricing_desc b {
+  color: #2b2b2b;
+  font-weight: 600;
+}
+
+.pricing_desc .dns {
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* Alt düymə sahəsi */
+.pricing_card .pricing_bottom {
+  padding: 15px 20px;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  margin: auto;
+}
+
+/* .pricing_card .pricing_bottom a {
+  display: inline-block;
+  background: var(--brown);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+} */
+
+/* .pricing_card .pricing_bottom a:hover {
+  background: var(--red);
+  box-shadow: 0 6px 20px rgba(140, 11, 10, 0.3);
+} */
+
+
+footer {
+  background: #fff;
+  color: #333;
+  font-family: "Play", sans-serif;
+  padding: 60px 0 30px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-logo-side {
+  max-width: 280px;
+}
+#logofooter img {
+  width: 120px;
+  transition: transform 0.3s ease;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer-question span {
+  font-weight: 700;
+  color: var(--brown);
+  font-size: 18px;
+}
+.footer-question p {
+  font-size: 15px;
+  color: #666;
+}
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+.footer-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(210, 20, 20, 0.08);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.footer-phone {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer-phone .phone {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+.footer-phone .mail {
+  color: var(--brown);
+  font-size: 15px;
+}
+.footer-btn .btn-main2 {
+  border: 1px solid var(--brown);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.footer-btn .btn-main2:hover {
+  background: var(--brown);
+  color: #fff;
+}
+
+.footer-divider {
+  height: 1px;
+  background: rgba(0,0,0,0.08);
+  margin-bottom: 40px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.footer-menu .menu-title,
+.footer-hours .menu-title {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--brown);
+  margin-bottom: 10px;
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 8px 40px;
+}
+.menu-grid a {
+  font-size: 16px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.menu-grid a:hover {
+  color: var(--brown);
+}
+
+.footer-hours .hours-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  font-size: 15px;
+}
+
+.footer-end {
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding-top: 20px !important;
+  margin-top: 30px;
+  font-size: 14px;
+  display:flex;
   justify-content: space-between;
   align-items: center
 }
-.footer-menu{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+
+.footer-end p{
+  color: #333;
+  font-size: 15px;
 }
-.menu-rows{
-  display: flex;
-  gap: 10px;
-}
-.footer-menu p{
-      color: var(--brown);
-    font-size: 28px;
-    font-weight: 700;
-}
-.menu-row{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.menu-row a{
-  font-size: 22px;
-  color: #333
+.footer-end a{
+  font-size: 16px;
+  text-decoration: none;
+  color:#333;
+  text-align: start;
 }
