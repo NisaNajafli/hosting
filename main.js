@@ -14,6 +14,17 @@ window.addEventListener("scroll", function () {
     nav.classList.remove("active");
   }
 });
+document.querySelectorAll('.offcanvas-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        const offcanvasEl = document.getElementById('offcanvasRight');
+        const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+
+        if (offcanvas) {
+            offcanvas.hide();
+        }
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   new Swiper('.swiperreviews', {
   loop: true, 
@@ -23,7 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
   pagination: { el: '.swiper-pagination', clickable: true },
   navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
   breakpoints: {
-    768: { slidesPerView: 1 },
+    0: {slidesPerView: 1},
+    768: { slidesPerView: 2 },
     1200: { slidesPerView: 3 }
   }
 });
@@ -37,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
   pagination: { el: '.swiper-pagination', clickable: true },
   navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
   breakpoints: {
-    768: { slidesPerView: 1 },
+    0: {slidesPerView: 1},
+    768: { slidesPerView: 2 },
     1200: { slidesPerView: 4 }
   }
 });
